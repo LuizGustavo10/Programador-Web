@@ -3,6 +3,8 @@ body {
     text-align: center;      /* centralizando texto*/ 
     background-color: rgb(198, 208, 244); /* cor de fundo */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2024/02/16/12/37/people-8577517_1280.jpg");
+    background-size: cover;
 }
 
 ul {
@@ -11,6 +13,7 @@ ul {
 
    
 }
+
 
 /*personalizando imagem*/
 #perfil {
@@ -21,16 +24,17 @@ ul {
     margin-bottom: 20px;
     margin-right: 20px;
 }
+
 #perfil:hover{
-    width: 125px;
+    width: 140px;
     transition: 2s;
-    filter: contrast(150%);
+    filter: grayscale(100%);
 }
 
 h1, h2, h3{
     text-shadow: 1px 1px 1px rgb(215, 213, 213);
     color: darkblue;
-    background-color: rgb(255, 255, 255);
+     background-color: rgba(255, 255, 255, 0.577); /* cor de fundo do card*/
     margin-top: -1px;
     border-start-start-radius: 15px;
     border-start-end-radius:15px;
@@ -39,14 +43,25 @@ h1, h2, h3{
 }
 
 section {
-    background-color: white; /* cor de fundo do card*/
-    max-width: 500px;          /* tamanho máximo do card*/
+    background-color: rgba(255, 255, 255, 0.577); /* cor de fundo do card*/
+     /* tamanho máximo do card*/
     min-width: 240px;          /* tamanho mínimo */
     margin: auto;              /*centralizar, margem automática */
     border-radius: 15px;       /*arredondar cantos*/
     padding: 1px;              /*espaçamento interno */
     margin-bottom: 20px;       /*margem de baixo do card*/
     box-shadow: 2px 2px 7px gray;
+    max-width: 500px;
+
+    animation: luiz infinite alternate;
+    animation-duration: 4s;
+}
+
+@keyframes luiz {
+    0%{ box-shadow: 2px 2px 2px red;}
+    25%{ box-shadow: 2px 2px 10px green;}
+    50%{ box-shadow: -2px -2px 6px blue; }
+    100%{ box-shadow: 4px 4px 20px blueviolet; }
 }
 
 /*quando passar o mouse no card*/
@@ -63,18 +78,23 @@ section:hover{
 }
 
 .menu {
-    background-color: black; /* cor fundo */
+    background-color: rgba(0, 0, 0, 0.622); /* cor fundo */
     border-radius: 15px;       /*arredondar borda*/
+
+    animation: slideInDown; 
+    animation-duration: 2s;
 }
 .menu ul li {
     display: inline-block;
     padding: 10px; /*espaçamento interno*/
     width: 170px;
-    background-color: darkblue;
+    background-color: rgb(32, 2, 131);
     border-radius: 10px;
-    box-shadow: 1px 1px 4px white;
+
     margin: 10px;
     text-align: center;
+
+
 }
 .menu ul li a {
     color: white;           /*cor da letra*/
@@ -92,9 +112,16 @@ section:hover{
     text-decoration: none; /*tira linha*/
     color: black;
 }
-.whats{
-    color: red;
+
+footer{
+    background-color: rgba(6, 6, 153, 0.682);
+    margin: -20px;
+    margin-top: 40px;
+    padding: 40px;
+    color: white;
+    box-shadow: 2px 2px 10px white;
 }
+
 
 
 /* configuração da personalização no modo celular */
@@ -114,6 +141,7 @@ section:hover{
 
     section {
         font-size: 12px;
+          
     }
     section:hover{
         font-size: 12px;
@@ -121,5 +149,6 @@ section:hover{
     ul.mostrarMenu{
         display: inline-block;
     }
+
 }
 
