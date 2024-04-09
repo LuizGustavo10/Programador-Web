@@ -1,0 +1,6 @@
+.menu {
+    background-color: cornflowerblue;
+    color: white;
+    height: 100vh; /*altura máxima da tela*/
+    list-style: none;
+}
