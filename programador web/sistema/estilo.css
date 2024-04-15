@@ -4,3 +4,42 @@
     height: 100vh; /*altura máxima da tela*/
     list-style: none;
 }
+
+.menu-item {
+    display: block;
+    margin-left: -40px;
+    padding: 10px 20px;
+    font-style: none;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.menu-item:hover{
+    background-color:white;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 1s;
+}
+
+@media(max-width: 768px){
+    .menu{
+        display: none;
+    }
+}
+
+.card{
+    box-shadow: 2px 2px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.card:hover{
+    background-color: honeydew;
+    transition: 2s;
+}
+
+
